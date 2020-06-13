@@ -15,7 +15,13 @@ export class ShoppingCartComponent implements OnInit {
     // if (this.localStore == null){
     //   this.localStore = [];
     // }
-    this.localStore = this.cartService.getProduct();
-    console.log(this.localStore);
+    // this.localStore = this.cartService.getProductInStorage();
+    // console.log(this.localStore);
+    try {
+      this.localStore = JSON.parse(localStorage.getItem('product'));
+      console.log(this.localStore);
+    }catch (e) {
+      alert(e);
+    }
   }
 }

@@ -9,8 +9,8 @@ import {HttpClient} from '@angular/common/http';
 export class CartService {
   urlFood = 'http://localhost:8081/api/food-list';
   foodList: Food[];
-  foodInCart: Food[];
-  localStorageItem: Food[];
+  foodInCart: Food[] = [];
+  localStorageItem: Food[] = [];
   // cart: Cart = { numInCart: 0};
   // addCart(){
   //   this.cart.numInCart++;
@@ -18,9 +18,6 @@ export class CartService {
   constructor(private httpClient: HttpClient) {
     this.getAll().subscribe(data => {
       this.foodList = data;
-      this.foodInCart = [];
-      this.localStorageItem = [];
-
     });
   }
   getAll(): Observable<Food[]>{
@@ -31,13 +28,13 @@ export class CartService {
     try {
       // alert('name:' + this.foodList[i].title);
       this.foodInCart.push(this.foodList[i]);
-      console.log(this.foodInCart);
+      // console.log(this.foodInCart);
+      localStorage.setItem('product', JSON.stringify(this.foodInCart));
     }catch (e) {
       alert(e);
     }
-    localStorage.setItem('product', JSON.stringify(this.foodInCart));
   }
-  // public getProduct(): Food[] {
+  // public getProductInStorage(): Food[] {
   //   try {
   //     this.localStorageItem.push(JSON.parse(localStorage.getItem('product')));
   //     console.log(this.localStorageItem);
