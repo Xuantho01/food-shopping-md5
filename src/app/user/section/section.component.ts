@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Category} from '../../module/Category';
+import {CategoryService} from '../../category.service';
 
 @Component({
   selector: 'app-section',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  categoryList: Category[];
+  showNav(){
+    const x = document.getElementById('nav-bar');
+    if (x.style.display === 'none') {
+      x.style.display = 'block';
+    } else {
+      x.style.display = 'none';
+    }
   }
-
+  constructor(private categoryService: CategoryService) {
+  }
+  ngOnInit() {
+    this.categoryService.getAll().subscribe( result => {
+      console.log(result);
+      this.categoryList = result;
+      console.log(this.categoryList);
+    });
+  }
 }

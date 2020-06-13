@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {RouterModule, Routes} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import {UserModule} from './user/user.module';
+import {AdminModule} from './admin/admin.module';
 
 const routes: Routes = [
   {path: '',
@@ -18,6 +21,9 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
+    UserModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,6 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { CartComponent } from './cart/cart.component';
 import { DetailComponent } from './detail/detail.component';
 import { SectionComponent } from './section/section.component';
-import { CategoryComponent } from './category/category.component';
 
 const routes: Routes = [
   {path: '',
@@ -25,7 +24,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, LayoutComponent, ProductListComponent, CartComponent, DetailComponent, SectionComponent, CategoryComponent],
+  declarations: [
+    HeaderComponent,
+    FooterComponent,
+    LayoutComponent,
+    ProductListComponent,
+    CartComponent,
+    DetailComponent,
+    SectionComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
