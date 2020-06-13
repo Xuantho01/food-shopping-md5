@@ -1,0 +1,80 @@
+<header class="header">
+  <div class="header__top" style="height:45px">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="header__top__left">
+            <ul>
+              <li><i class="fa fa-envelope"></i>hoxuantho95@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="header__top__right">
+            <div class="header__top__right__social">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="header__top__right__language">
+              <img src="../../../assets/img/language.png" alt="">
+              <div>English</div>
+              <span class="arrow_carrot-down"></span>
+              <ul>
+                <li><a href="#">Spanis</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </div>
+            <div class="header__top__right__auth" style="margin-right: 20px">
+<!--              <a (click)="auth.login()" *ngIf="!auth.loggedIn" class="fa fa-user"> Login</a>-->
+            </div>
+            <div class="header__top__right__auth">
+<!--              <a (click)="auth.logout()" *ngIf="auth.loggedIn" class="fa fa-user"> Logout</a>-->
+            </div>
+            <div class="header__top__right__auth">
+<!--              <a routerLink="profile" *ngIf="auth.loggedIn">Profile</a>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="header__logo">
+          <a routerLink=""><img src="../../../assets/img/logo.png"></a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <nav class="header__menu">
+          <ul>
+            <li class="active"><a routerLink="">Home</a></li>
+            <li><a routerLink="/shop-home">Shop</a></li>
+            <li><a href="#">Pages</a>
+              <ul class="header__menu__dropdown">
+                <li><a routerLink="/detail">Shop Details</a></li>
+                <li><a routerLink="/cart">Shoping Cart</a></li>
+                <li><a routerLink="/checkout">Check Out</a></li>
+                <li><a href="./blog-details.html">Blog Details</a></li>
+              </ul>
+            </li>
+            <li><a routerLink="/blog">Blog</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-lg-3">
+        <div class="header__cart">
+          <ul>
+            <li><a href="#"><i class="fa fa-heart"></i><span>1</span></a></li>
+<!--            <li><a routerLink="/cart"><i class="fa fa-shopping-bag"></i><span>{{cart.cart.numInCart}}</span></a></li>-->
+            <!--            {{cartService.cart.numInCart}}-->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="humberger__open">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+</header>
