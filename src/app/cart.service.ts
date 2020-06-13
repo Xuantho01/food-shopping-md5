@@ -37,13 +37,13 @@ export class CartService {
     }
     localStorage.setItem('product', JSON.stringify(this.foodInCart));
   }
-  public getProduct(): Food[] {
-    try {
-      this.localStorageItem.push(JSON.parse(localStorage.getItem('product')));
-      console.log(this.localStorageItem);
-    }catch (e) {
-      alert(e);
-    }
-    return this.localStorageItem;
-  }
+  // public getProduct(): Food[] {
+  //   try {
+  //     this.localStorageItem.push(JSON.parse(localStorage.getItem('product')));
+  //     console.log(this.localStorageItem);
+  //   }catch (e) {
+  //     alert(e);
+  //   }
+  //   return this.localStorageItem;
+  // }
 }
