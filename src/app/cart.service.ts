@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import {Food} from './module/Food';
 import {HttpClient} from '@angular/common/http';
+import {FoodListService} from './food-list.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,8 @@ export class CartService {
   // addCart(){
   //   this.cart.numInCart++;
   // }
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient,
+              private foodService: FoodListService) {
     this.getAll().subscribe(data => {
       this.foodList = data;
     });
