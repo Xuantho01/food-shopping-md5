@@ -10,7 +10,6 @@ export class CartService {
   urlFood = 'http://localhost:8081/api/food-list';
   foodList: Food[];
   foodInCart: Food[] = [];
-  localStorageItem: Food[] = [];
   // cart: Cart = { numInCart: 0};
   // addCart(){
   //   this.cart.numInCart++;
@@ -24,23 +23,11 @@ export class CartService {
     return this.httpClient.get<Food[]>(this.urlFood);
   }
   addInCart(i: number){
-    // this.addNewCart.addCart();
     try {
-      // alert('name:' + this.foodList[i].title);
       this.foodInCart.push(this.foodList[i]);
-      // console.log(this.foodInCart);
       localStorage.setItem('product', JSON.stringify(this.foodInCart));
     }catch (e) {
       alert(e);
     }
   }
-  // public getProductInStorage(): Food[] {
-  //   try {
-  //     this.localStorageItem.push(JSON.parse(localStorage.getItem('product')));
-  //     console.log(this.localStorageItem);
-  //   }catch (e) {
-  //     alert(e);
-  //   }
-  //   return this.localStorageItem;
-  // }
 }
