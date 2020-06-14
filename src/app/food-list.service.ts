@@ -10,7 +10,7 @@ export class FoodListService {
   urlFood = 'http://localhost:8081/api/food-list';
   urlAddFood = 'http://localhost:8081/api/create-food';
   urlUpdateFood = 'http://localhost:8081/api/edit-food';
-  deleteFood = 'http://localhost:8081/api/edit-food';
+  deleteFood = 'http://localhost:8081/api/delete-food';
   urlGetFood = 'http://localhost:8081/api/see-detail';
   constructor(private httpClient: HttpClient) {}
   getAll(): Observable<Food[]>{

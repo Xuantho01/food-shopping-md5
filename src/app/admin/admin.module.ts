@@ -33,7 +33,6 @@ const routes: Routes = [
   declarations: [AddComponent, TaskComponent, ProductListComponent, UpdateComponent, OderListComponent],
   imports: [
     CommonModule,
-    BrowserModule,
     RouterModule.forChild(routes),
     ReactiveFormsModule,
     HttpClientModule

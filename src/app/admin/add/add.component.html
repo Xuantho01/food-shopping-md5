@@ -1,3 +1,4 @@
+
 <section class="hero">
   <div class="container">
     <div class="row">
@@ -10,8 +11,10 @@
           <app-task></app-task>
         </div>
       </div>
+      <div class="col-lg-9">
+        <h3>ADD NEW PRODUCT</h3>
       <form [formGroup]="foodForm" (ngSubmit)="onSubmit()">
-        <div class="col-lg-9">
+
           <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">Title: </label>
             <div class="col-10">
@@ -47,8 +50,8 @@
           <div>
             <button type="submit" class="btn btn-outline-success" style="margin-left: 450px">Create</button>
           </div>
-        </div>
       </form>
+      </div>
     </div>
   </div>
 </section>

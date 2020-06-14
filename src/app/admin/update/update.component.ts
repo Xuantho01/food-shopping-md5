@@ -57,7 +57,6 @@ export class UpdateComponent implements OnInit {
         ...this.foodCurrent,
         ...value
       };
-      debugger;
       this.foodListService.updateProduct(data).subscribe(
         () => {
           alert('successfully');
