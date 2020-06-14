@@ -26,6 +26,6 @@ export class FoodListService {
     return this.httpClient.delete<Food>(this.deleteFood + `/${id}`);
   }
   getFood(id: number): Observable<Food>{
-    return this.httpClient.get<Food>(this.urlGetFood + `/${id}`);
+    return this.httpClient.get<Food>(`${this.urlGetFood}/${id}`);
   }
 }
