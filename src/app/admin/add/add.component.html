@@ -10,43 +10,45 @@
           <app-task></app-task>
         </div>
       </div>
-<!--      <form [formGroup]="foodForm" (ngSubmit)="onSubmit()")></form>-->
-      <div class="col-lg-9">
-        <div class="form-group row">
-          <label for="example-text-input" class="col-2 col-form-label">Title: </label>
-          <div class="col-10">
-            <input class="form-control" type="text" id="example-text-input" formControlName="title">
+      <form [formGroup]="foodForm" (ngSubmit)="onSubmit()">
+        <div class="col-lg-9">
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Title: </label>
+            <div class="col-10">
+              <input class="form-control" type="text" id="example-text-input" formControlName="title">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Price: </label>
+            <div class="col-10">
+              <input class="form-control" type="number" formControlName="price" id="example-search-input">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-email-input" class="col-2 col-form-label">Discount: </label>
+            <div class="col-10">
+              <input class="form-control" type="number" id="example-email-input" formControlName="discount">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-url-input" class="col-2 col-form-label">Image: </label>
+            <div class="col-10">
+              <input class="form-control" type="text" id="example-url-input" formControlName="image">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-2 col-form-label">Category: </label>
+            <div class="col-10">
+              <select formControlName="category">
+                <option *ngFor="let category of categoryList" [value]="category.id">{{category.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-outline-success" style="margin-left: 450px">Create</button>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="example-search-input" class="col-2 col-form-label" >Price: </label>
-          <div class="col-10">
-            <input class="form-control" type="number" value="How do I shoot web"  formGroupName="price" id="example-search-input">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-email-input" class="col-2 col-form-label">Discount: </label>
-          <div class="col-10">
-            <input class="form-control" type="number" id="example-email-input" formGroupName="discount">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="example-url-input" class="col-2 col-form-label" formGroupName="image">Image: </label>
-          <div class="col-10">
-            <input class="form-control" type="text" id="example-url-input">
-          </div>
-        </div>
-        <div class="form-group row">
-          <label  class="col-2 col-form-label">Category: </label>
-          <!--          <div class="col-10">-->
-          <!--            <input class="form-control" type="tel" id="example-tel-input">-->
-          <!--          </div>-->
-          <select formControlName="category">
-<!--            <option *ngFor="let category of categoryList" [value]="category.id">{{category.name}}</option>-->
-          </select>
-        </div>
-        <button type="button" class="btn btn-outline-success" style="margin-left: 450px">Create</button>
-      </div>
+      </form>
     </div>
   </div>
 </section>

@@ -8,6 +8,8 @@ import { OderListComponent } from './oder-list/oder-list.component';
 import {RouterModule, Routes} from '@angular/router';
 import {LayoutComponent} from '../user/layout/layout.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {BrowserModule} from '@angular/platform-browser';
 
 const routes: Routes = [
   {path: '',
@@ -21,8 +23,8 @@ const routes: Routes = [
         component: ProductListComponent},
       {path: 'user-list',
         component: ProductListComponent},
-      {path: 'update',
-        component: ProductListComponent}
+      {path: 'update/:id',
+        component: UpdateComponent}
     ]
   },
 ];
@@ -31,8 +33,10 @@ const routes: Routes = [
   declarations: [AddComponent, TaskComponent, ProductListComponent, UpdateComponent, OderListComponent],
   imports: [
     CommonModule,
+    BrowserModule,
     RouterModule.forChild(routes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class AdminModule { }
